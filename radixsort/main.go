@@ -12,8 +12,9 @@ import (
 func main() {
 	postleitzahlen := make([]int, 1000000)
 	postleitzahlen2 := make([]int, 1000000)
-	for i := 01001; i < len(postleitzahlen); i++ {
-		postleitzahlen[i] = rand.Intn(99999)
+
+	for i := 0; i < len(postleitzahlen); i++ {
+		postleitzahlen[i] = rand.Intn(98999) + 1000
 	}
 	copy(postleitzahlen2, postleitzahlen)
 	start1 := time.Now()
